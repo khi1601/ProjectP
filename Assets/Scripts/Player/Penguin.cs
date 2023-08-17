@@ -11,14 +11,16 @@ public class Penguin : MonoBehaviour
     [SerializeField]
     private float jumpPower;
     public bool isground;
-    private Rigidbody2D rigidbody;
+    private bool fixedJump;
+    private Rigidbody2D rigid;
     private Animator ani;
     public LayerMask islayer;
     // Start is called before the first frame update
     void Start()
     {
         isground = true;
-        rigidbody= GetComponent<Rigidbody2D>();
+        fixedJump = false;
+        rigid= GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
     }
 
@@ -28,11 +30,15 @@ public class Penguin : MonoBehaviour
         Jump();
         Movement();
         GroundCheck();
-        
     }
     private void FixedUpdate()
     {
-        
+        if (fixedJump)
+        {
+            ani.SetBool("isJump", true);
+            rigid.velocity = Vector2.up * jumpPower;
+            fixedJump = false;
+        }
     }
     void Movement()
     {
@@ -57,15 +63,28 @@ public class Penguin : MonoBehaviour
         if(isground&&Input.GetKeyDown(KeyCode.A))
         {
             isground = false;
-            ani.SetBool("isJump", true);
-            rigidbody.velocity = Vector2.up * jumpPower;
+            fixedJump = true;
            
         }
     }
     void GroundCheck()
     {
-        isground = Physics2D.OverlapCircle(transform.position, 0.49f, islayer);
-        if(isground&&rigidbody.velocity.y<=0f)
+        //isground = Physics2D.OverlapCircle(transform.position, 0.59f, islayer);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector3(0, -1, 0), 0.59f, LayerMask.GetMask("Ground"));
+
+        if (hit.collider != null)
+        {
+            isground = true;
+        }
+        else
+        {
+            isground= false;
+        }
+
+        if (isground&&rigid.velocity.y<=0f)
+        {
+            rigid.velocity = new Vector3(rigid.velocity.x, 0, 0);
             ani.SetBool("isJump", false);
+        }
     }
 }

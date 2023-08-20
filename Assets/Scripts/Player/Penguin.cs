@@ -82,7 +82,7 @@ public class Penguin : MonoBehaviour
     {
         //isground = Physics2D.OverlapCircle(transform.position, 0.59f, islayer);
         Vector3 rayPos = new Vector3(transform.position.x, transform.position.y-testCognizeBottomGround, transform.position.z);
-        RaycastHit2D hit = Physics2D.Raycast(rayPos, new Vector3(0, -1, 0), 0.04f, LayerMask.GetMask("Ground"));
+        RaycastHit2D hit = Physics2D.Raycast(rayPos, new Vector3(0, -1, 0), 0.07f, LayerMask.GetMask("Ground"));
 
         if (hit.collider != null)
         {

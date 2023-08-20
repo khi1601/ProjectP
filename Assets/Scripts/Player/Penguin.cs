@@ -38,12 +38,12 @@ public class Penguin : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (fixedJump)
-        {
-            ani.SetBool("isJump", true);
-            rigid.velocity = Vector2.up * jumpPower;
-            fixedJump = false;
-        }
+        //if (fixedJump)
+        //{
+        //    ani.SetBool("isJump", true);
+        //    rigid.velocity = Vector2.up * jumpPower;
+        //    fixedJump = false;
+        //}
     }
     void Movement()
     {
@@ -73,7 +73,9 @@ public class Penguin : MonoBehaviour
         if((isground|| Physics2D.OverlapCircle(transform.position, testCognizeSideGround, islayer) )&& Input.GetKeyDown(KeyCode.Space) )
         {
             isground = false;
-            fixedJump = true;
+            ani.SetBool("isJump", true);
+            rigid.velocity = Vector2.up * jumpPower;
+            //fixedJump = true;
         }
     }
     void GroundCheck()

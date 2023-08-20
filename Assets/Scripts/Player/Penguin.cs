@@ -72,9 +72,9 @@ public class Penguin : MonoBehaviour
     {
         if((isground|| Physics2D.OverlapCircle(transform.position, testCognizeSideGround, islayer) )&& Input.GetKeyDown(KeyCode.Space) )
         {
-            isground = false;
-            ani.SetBool("isJump", true);
             rigid.velocity = Vector2.up * jumpPower;
+            ani.SetBool("isJump", true);
+            isground = false;
             //fixedJump = true;
         }
     }

@@ -10,6 +10,10 @@ public class Penguin : MonoBehaviour
     private float moveSpeed;
     [SerializeField]
     private float jumpPower;
+    [SerializeField]
+    private float testCognizeSideGround;
+    [SerializeField]
+    private float testCognizeBottomGround;
     public bool isground;
     private bool fixedJump;
     private Rigidbody2D rigid;
@@ -30,6 +34,7 @@ public class Penguin : MonoBehaviour
         Jump();
         Movement();
         GroundCheck();
+        Attack();
     }
     private void FixedUpdate()
     {
@@ -47,20 +52,25 @@ public class Penguin : MonoBehaviour
         {
             flipMove = Vector3.left;
             transform.localScale = new Vector3(-1, 1, 1);
+            ani.SetBool("isWalk", true);
         }
         else if(Input.GetAxisRaw("Horizontal") >0)
         {
             flipMove = Vector3.right;
             transform.localScale=new Vector3(1, 1, 1);
+            ani.SetBool("isWalk", true);
         }
         else
+        {
             flipMove = Vector3.zero;
+            ani.SetBool("isWalk", false);
+        }
         transform.position += flipMove * moveSpeed * Time.deltaTime;
 
     }
     void Jump()
     {
-        if((isground|| Physics2D.OverlapCircle(transform.position, 0.59f, islayer) )&& Input.GetKeyDown(KeyCode.Space) )
+        if((isground|| Physics2D.OverlapCircle(transform.position, testCognizeSideGround, islayer) )&& Input.GetKeyDown(KeyCode.Space) )
         {
             isground = false;
             fixedJump = true;
@@ -69,7 +79,7 @@ public class Penguin : MonoBehaviour
     void GroundCheck()
     {
         //isground = Physics2D.OverlapCircle(transform.position, 0.59f, islayer);
-        Vector3 rayPos = new Vector3(transform.position.x, transform.position.y-0.45f, transform.position.z);
+        Vector3 rayPos = new Vector3(transform.position.x, transform.position.y-testCognizeBottomGround, transform.position.z);
         RaycastHit2D hit = Physics2D.Raycast(rayPos, new Vector3(0, -1, 0), 0.04f, LayerMask.GetMask("Ground"));
 
         if (hit.collider != null)
@@ -85,6 +95,13 @@ public class Penguin : MonoBehaviour
         {
             rigid.velocity = new Vector3(rigid.velocity.x, 0, 0);
             ani.SetBool("isJump", false);
+        }
+    }
+    void Attack()
+    {
+        if(Input.GetKeyDown(KeyCode.D))
+        {
+            ani.SetBool("isAttack",true);
         }
     }
 }

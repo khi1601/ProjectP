@@ -106,4 +106,8 @@ public class Penguin : MonoBehaviour
             ani.SetBool("isAttack",true);
         }
     }
+    void FinishAttack()
+    {
+        ani.SetBool("isAttack", false);
+    }
 }

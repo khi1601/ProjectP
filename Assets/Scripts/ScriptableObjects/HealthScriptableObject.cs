@@ -9,7 +9,7 @@ public class HealthScriptableObject : ScriptableObject
     public int health = 0;
 
     [SerializeField]
-    public int maxHealth = 50;
+    public int maxHealth = 100;
 
     [System.NonSerialized]
     public UnityEvent<int> healthChangeEvent;

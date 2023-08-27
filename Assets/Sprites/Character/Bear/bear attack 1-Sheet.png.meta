@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dca76c9c01c9d474580bcf14c96570cd
+guid: 179a5fb8631f7294cb29457f3b0cbfc6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -141,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uD3AD\uADC4 \uBAA8\uC158_\uACF5\uACA9_0"
+      name: bear attack 1-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,83 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83b46b23ccb69f548b73ab31d64c140d
-      internalID: 1591843297
+      spriteID: 21edb84202f8dbf478a70b3a257b8d17
+      internalID: 330290643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uD3AD\uADC4 \uBAA8\uC158_\uACF5\uACA9_1"
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d7cf5ddbe9539d499ff7ef1a5aab1d8
-      internalID: 724715956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\uD3AD\uADC4 \uBAA8\uC158_\uACF5\uACA9_2"
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61080b97d685a7a43babb9ea632fe421
-      internalID: -1453959774
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\uD3AD\uADC4 \uBAA8\uC158_\uACF5\uACA9_3"
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75e19e070a4df2d48b45b156f0ad2317
-      internalID: 986418436
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\uD3AD\uADC4 \uBAA8\uC158_\uACF5\uACA9_4"
+      name: bear attack 1-Sheet_1
       rect:
         serializedVersion: 2
         x: 512
         y: 0
-        width: 128
-        height: 128
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,8 +176,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f17d3f932c0d6e943a92bf5d9e7014d2
-      internalID: -1291542705
+      spriteID: baedb32c1f1abd647801d55b03924087
+      internalID: 1765587069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bear attack 1-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea587186c30872840ae73c4db6fea720
+      internalID: -1675787471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bear attack 1-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a13536348967924bb4fd98b949d8a36
+      internalID: 925691568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bear attack 1-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6cf5526b3741594490ccfd85e87d43c
+      internalID: 394607193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bear attack 1-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458d48f8f43450b4a8044c11f441808a
+      internalID: -1303996402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bear attack 1-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37aadbbdf6bd8e9429171f6f8a65fceb
+      internalID: 1817504874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bear attack 1-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48baeeea2c9c35b42b78b61c755bb8a5
+      internalID: -930503285
       vertices: []
       indices: 
       edges: []
@@ -256,11 +319,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\uD3AD\uADC4 \uBAA8\uC158_\uACF5\uACA9_0": 1591843297
-      "\uD3AD\uADC4 \uBAA8\uC158_\uACF5\uACA9_1": 724715956
-      "\uD3AD\uADC4 \uBAA8\uC158_\uACF5\uACA9_2": -1453959774
-      "\uD3AD\uADC4 \uBAA8\uC158_\uACF5\uACA9_3": 986418436
-      "\uD3AD\uADC4 \uBAA8\uC158_\uACF5\uACA9_4": -1291542705
+      bear attack 1-Sheet_0: 330290643
+      bear attack 1-Sheet_1: 1765587069
+      bear attack 1-Sheet_2: -1675787471
+      bear attack 1-Sheet_3: 925691568
+      bear attack 1-Sheet_4: 394607193
+      bear attack 1-Sheet_5: -1303996402
+      bear attack 1-Sheet_6: 1817504874
+      bear attack 1-Sheet_7: -930503285
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

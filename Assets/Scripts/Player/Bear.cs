@@ -32,7 +32,7 @@ public class Bear : MonoBehaviour
         Jump();
         Movement();
         GroundCheck();
-        //Attack();
+        Attack();
     }
     private void FixedUpdate()
     {

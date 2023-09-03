@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameEvent : ScriptableObject
 {
 	private List<GameEventListener> listeners =
-		new List<GameEventListener>();
+		new List<GameEventListener>(); //리스너들을 담아둘리스트
 
 	public void Raise()
 	{
@@ -14,9 +14,9 @@ public class GameEvent : ScriptableObject
 			listeners[i].OnEventRaised();
 	}
 
-	public void RegisterListener(GameEventListener listener)
+	public void RegisterListener(GameEventListener listener) //리스너등록하는함수
 	{ listeners.Add(listener); }
 
-	public void UnregisterListener(GameEventListener listener)
+	public void UnregisterListener(GameEventListener listener)//리스너삭제하는함수
 	{ listeners.Remove(listener); }
 }

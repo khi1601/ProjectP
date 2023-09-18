@@ -10,13 +10,14 @@ public class HealthIncreaseTrigger : MonoBehaviour
     [SerializeField]
     private HealthScriptableObject healthManager;
 
-    public GameEvent healthIncreaseEvent;
+   // public GameEvent healthIncreaseEvent;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
-            //healthIncreaseEvent.Raise();
+           // other.gameObject.GetComponent<HealthScriptableObject>().IncreaseHealth(helathIncreaseAmount);
+           // healthIncreaseEvent.Raise();
             healthManager.IncreaseHealth(helathIncreaseAmount);
             gameObject.SetActive(false);
         }

@@ -16,5 +16,6 @@ public class GameEventListener : MonoBehaviour
     { Event.UnregisterListener(this); }
 
     public void OnEventRaised() //이벤트발생시
-    { Response?.Invoke(); } //UnityEvent형식의변수Response가 가지고있는리스너들에게이벤트발생
+    { Response?.Invoke(); } //UnityEvent형식의변수Response에 접근해서Invoke() 실행
+                            //Response 가 가지고있는리스너들에게이벤트발생
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,20 +8,12 @@ using UnityEngine.Events;
 public class HealthScriptableObject : ScriptableObject
 {
     public int health = 0;
+    public int numOfHearts;
 
     [SerializeField]
     public int maxHealth = 50;
 
-  //  [System.NonSerialized]
-  //  public UnityEvent<int> healthChangeEvent;
-
-
-    private void OnEnable()
-    {
-       // health = maxHealth;
-       // if (healthChangeEvent == null)
-        //    healthChangeEvent = new UnityEvent<int>();
-    }
+    public static event Action OnPlayerHealed;
 
     public void DecreaseHealth(int amount)
     {
@@ -31,7 +24,8 @@ public class HealthScriptableObject : ScriptableObject
     public void IncreaseHealth(int amount)
     {
         health += amount;
-        //healthChangeEvent.Invoke(health);
+        OnPlayerHealed?.Invoke();
+
         if (health > maxHealth) //최대 체력을 넘기면
         {
             health = maxHealth;

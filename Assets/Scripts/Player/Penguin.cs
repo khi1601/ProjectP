@@ -14,11 +14,14 @@ public class Penguin : MonoBehaviour
     private float testCognizeSideGround;
     [SerializeField]
     private float testCognizeBottomGround;
+    [SerializeField]
+    public Transform bulletPos;
     public bool isground;
     private bool fixedJump;
     private Rigidbody2D rigid;
     private Animator ani;
     public LayerMask islayer;
+    public GameObject bullet;
     // Start is called before the first frame update
     void Start()
     {
@@ -109,5 +112,19 @@ public class Penguin : MonoBehaviour
     void FinishAttack()
     {
         ani.SetBool("isAttack", false);
+    }
+    void LaunchMissile()
+    {
+        GameObject bulletobj = Instantiate(bullet, bulletPos.position,Quaternion.identity);
+        if (transform.localScale.x==-1)
+        {
+            bulletobj.GetComponent<PenguinMissile>().Direction = -1;
+            bullet.transform.eulerAngles = new Vector3(0, 180f, 0);
+        }
+        else
+        {
+            bulletobj.GetComponent<PenguinMissile>().Direction = 1;
+            bullet.transform.eulerAngles = new Vector3(0, 0, 0);
+        }
     }
 }

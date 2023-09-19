@@ -998,11 +998,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9808e9b69fab947408d3777f489afbca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 0
   moveSpeed: 30
   jumpPower: 27
   testCognizeSideGround: 2.14
   testCognizeBottomGround: 5.9
   isground: 0
+  rigid: {fileID: 1382014287}
+  ani: {fileID: 1382014289}
   islayer:
     serializedVersion: 2
     m_Bits: 0
@@ -1310,15 +1313,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e48e844b2825949bb95ec14b8ede91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   moveSpeed: 30
   jumpPower: 20
   testCognizeSideGround: 3.93
   testCognizeBottomGround: 3
-  bulletPos: {fileID: 1126860463}
   isground: 0
+  rigid: {fileID: 1831044478}
+  ani: {fileID: 1831044475}
   islayer:
     serializedVersion: 2
     m_Bits: 64
+  bulletPos: {fileID: 1126860463}
   bullet: {fileID: 2963901803277887648, guid: d8aa300f93c9b444ba91ed157a9fe1b7, type: 3}
 --- !u!1 &1981095644
 GameObject:

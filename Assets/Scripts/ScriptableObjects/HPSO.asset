@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 423514a4a8e10b64086b00109fddcc88, type: 3}
   m_Name: HPSO
   m_EditorClassIdentifier: 
-  health: 4
-  numOfHearts: 0
-  maxHealth: 12
+  health: 11.5
+  maxHealth: 50

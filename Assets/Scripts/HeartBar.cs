@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HeartBar : MonoBehaviour
 {
+    int newHealth;
+    int maxHealthCnt = 10;
+
     public GameObject heartPrefab;
 
     [SerializeField]
@@ -14,10 +17,12 @@ public class HeartBar : MonoBehaviour
     private void OnEnable()
     {
         HealthScriptableObject.OnPlayerHealed += DrawHearts;
+        HealthScriptableObject.OnPlayerDamaged+= DrawHearts;
     }
     private void OnDisable()
     {
         HealthScriptableObject.OnPlayerHealed -= DrawHearts;
+        HealthScriptableObject.OnPlayerDamaged -= DrawHearts;
     }
     private void Start()
     {
@@ -27,16 +32,18 @@ public class HeartBar : MonoBehaviour
     {
         ClearHearts();
 
-        float maxHelathRemainder = healthManager.maxHealth % 2;
-        int heartsToMake = (int)(healthManager.maxHealth / 2 + maxHelathRemainder);
+        /*float maxHelathRemainder = healthManager.maxHealth % 2;
+        int heartsToMake = (int)(healthManager.maxHealth / 2 + maxHelathRemainder);*/
+        float maxHelathRemainder = maxHealthCnt % 2;
+        int heartsToMake = (int)(maxHealthCnt / 2 + maxHelathRemainder);
         for (int i = 0; i < heartsToMake; i++)
         {
             CreateEmptyHeart();
         }
-
+        newHealth = ChangeHealthValue(healthManager.health);
         for (int i = 0; i < hearts.Count; i++)
         {
-            int heartStatusRemainder = Mathf.Clamp(healthManager.health - (i * 2), 0, 2);
+            int heartStatusRemainder = Mathf.Clamp(newHealth - (i * 2), 0, 2);
             hearts[i].SetHeartImg((HeartStatus)heartStatusRemainder);
         }
     }
@@ -58,5 +65,15 @@ public class HeartBar : MonoBehaviour
             Destroy(t.gameObject);
         }
         hearts = new List<HealthHeart>();
+    }
+
+    public int  ChangeHealthValue(float currentHealth)
+    {
+        if(currentHealth%5==0)
+        {
+            return (int)(currentHealth / 5);
+        }
+        return (int)(currentHealth / 5) + 1;
+
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CoinTrigger : MonoBehaviour
 {
 
-    [SerializeField, Tooltip("the coin's value")]
+    [SerializeField, Tooltip("Coin Count")]
     private int coins = 1;
 
     [SerializeField]

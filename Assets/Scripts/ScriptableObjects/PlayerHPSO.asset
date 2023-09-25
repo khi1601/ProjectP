@@ -9,6 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 222b8131758637f4eb3c68aef528cd29, type: 3}
-  m_Name: OnHealthIncrease
+  m_Script: {fileID: 11500000, guid: 423514a4a8e10b64086b00109fddcc88, type: 3}
+  m_Name: PlayerHPSO
   m_EditorClassIdentifier: 
+  health: 10
+  maxHealth: 50

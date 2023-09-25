@@ -14,7 +14,9 @@ public class HealthIncreaseTrigger : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            healthManager.IncreaseHealth(helathIncreaseAmount);
+            healthManager.newIncreaseHealth();
+
+            //healthManager.IncreaseHealth(helathIncreaseAmount);
             gameObject.SetActive(false);
         }
     }

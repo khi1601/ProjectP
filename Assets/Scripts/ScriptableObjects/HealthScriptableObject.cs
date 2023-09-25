@@ -38,4 +38,9 @@ public class HealthScriptableObject : ScriptableObject
         }
     }
 
+    public void newIncreaseHealth()
+    {
+        health = maxHealth;
+        OnPlayerHealed?.Invoke();
+    }
 }

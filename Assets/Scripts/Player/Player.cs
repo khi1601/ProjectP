@@ -27,15 +27,25 @@ public abstract class Player : MonoBehaviour
     [AutoProperty]
     public Animator ani;
     public LayerMask islayer;
+
+    protected bool isAttack;
     // Start is called before the first frame update
     protected void Start()
     {
         isground = true;
         fixedJump = false;
+        isAttack = false;
     }
 
     protected void Movement()
     {
+        if (isAttack && !isground)
+        {
+
+        }
+        else if (isAttack)
+            return;
+        
         Vector3 flipMove = Vector3.zero;
         if (Input.GetAxisRaw("Horizontal") < 0)
         {

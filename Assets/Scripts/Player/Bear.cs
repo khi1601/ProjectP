@@ -33,11 +33,13 @@ public class Bear : Player
     {
         if (Input.GetKeyDown(KeyCode.D))
         {
+            isAttack = true;
             ani.SetBool("isAttack", true);
         }
     }
     void FinishAttack()
     {
+        isAttack=false;
         ani.SetBool("isAttack", false);
     }
 }

@@ -37,11 +37,13 @@ public class Penguin : Player
     {
         if(Input.GetKeyDown(KeyCode.D))
         {
+            isAttack = true;
             ani.SetBool("isAttack",true);
         }
     }
     void FinishAttack()
     {
+        isAttack = false;
         ani.SetBool("isAttack", false);
     }
     void LaunchMissile()
